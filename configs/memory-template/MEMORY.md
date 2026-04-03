@@ -1,0 +1,1 @@
+- [CLI Work Boundaries](feedback_cli_boundaries.md) — Claude coordinates only, never takes over CLI tasks; escalate to user after repeated failures
