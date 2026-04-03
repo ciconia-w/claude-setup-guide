@@ -1,1 +1,4 @@
 - [CLI Work Boundaries](feedback_cli_boundaries.md) — Claude coordinates only, never takes over CLI tasks; escalate to user after repeated failures
+- [多CLI并行不要阻塞](feedback_parallel_cli.md) — 派发 codex/gemini/opencode 任务时后台运行，不要同步等待
+- [Claude只做指挥不写代码](feedback_coordinator_role.md) — 产出不好就重新指挥，探索更好工具（Figma/参考项目），不自己动手改代码
+- [配置同步到GitHub](feedback_sync_config_to_github.md) — 本地重要配置改动必须同步到 ciconia-w/claude-setup-guide
