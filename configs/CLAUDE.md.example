@@ -1,10 +1,9 @@
 # OMC Project Instructions
 
-This project uses the WSL-backed OMC workflow.
+This project uses the oh-my-claudecode multi-agent workflow on Linux.
 
-Preferred launch methods:
-- From Windows PowerShell in this repo: `.\start-wsl-claude-omc.cmd`
-- From WSL in this repo: `claude-omc`
+Preferred launch method:
+- From shell: `omc launch`
 
 When choosing a specialist model, prefer:
 - Codex for backend work, bug fixing, debugging, refactors, scripts, tests, and code review.
@@ -16,7 +15,7 @@ When a task benefits from multiple perspectives:
 - If the user explicitly names a model, follow that request.
 
 Execution rules:
-- Prefer running `omc` and related CLIs from WSL, not native Windows shell assumptions.
+- Prefer running `omc` and related CLIs from the shell directly.
 - Treat the repository files as the source of truth and verify code before answering.
 - Keep outputs and traces under `.omc/artifacts/` when the workflow already does so.
 
@@ -30,6 +29,7 @@ Work boundaries:
 - Claude coordinates only. Never take over tasks assigned to other CLIs.
 - If a CLI fails multiple times, discuss with user rather than silently taking over.
 - Claude may edit other CLIs' global config files when needed.
+- Only escalate to the user after genuine repeated failures, not on first friction.
 
 Skill management:
 - When searching for skills, MUST use the `find-skills` skill first.
